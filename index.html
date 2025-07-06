@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carambola Induzidos - Especialistas em Elétrica Automotiva</title>
+    <meta name="description" content="Carambola Induzidos: Oficina especializada em elétrica automotiva em Araçatuba-SP. Manutenção de sistemas elétricos, motores de partida, alternadores e mais." />
+    <link rel="icon" href="/logo_carambola_32x32.png" type="image/png" />
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" /></noscript>
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #fff;
+            --accent-color: #e44d26; /* A more refined red/orange for branding */
+            --secondary-accent-color: #007bff; /* Complementary color */
+            --container-bg: rgba(26, 26, 26, 0.9);
+            --border-color: rgba(255, 255, 255, 0.2);
+            --shadow-light: rgba(255, 255, 255, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.6);
+            --font-family-primary: 'Poppins', sans-serif;
+            --header-height: 80px; /* Define header height as a variable */
+        }
+
+        /* Dark Mode (toggleable) */
+        body.dark-mode {
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --accent-color: #c0392b;
+            --secondary-accent-color: #0056b3;
+            --container-bg: rgba(255, 255, 255, 0.9);
+            --border-color: rgba(0, 0, 0, 0.1);
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-dark: rgba(0, 0, 0, 0.2);
+            background-image: url('/flamarini_trabalhando_light.jpg') !important; /* Different background for light mode */
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family-primary);
+            background: var(--bg-color) url('/flamarini_trabalhando.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+            min-height: 100vh;
+            padding-top: var(--header-height);
+            transition: background 0.4s, color 0.4s, background-image 0.4s;
+            line-height: 1.6;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Header & Navigation */
+        .main-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: var(--header-height);
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+            z-index: 1000;
+            box-shadow: 0 2px 15px var(--shadow-dark);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            color: var(--accent-color);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .theme-toggle-btn {
+            background: none;
+            border: 2px solid var(--text-color);
+            color: var(--text-color);
+            font-size: 1.2rem;
+            padding: 8px 12px;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-left: 20px;
+            transition: background 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .theme-toggle-btn:hover {
+            background: var(--text-color);
+            color: var(--bg-color);
+            border-color: var(--bg-color);
+        }
+
+        /* Section Styling */
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px; /* More padding for larger sections */
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); /* Darker overlay for text readability */
+            padding-top: calc(var(--header-height) + 50px); /* Adjust for fixed header */
+            text-align: center;
+        }
+
+        .hero-container {
+            background: var(--container-bg);
+            border-radius: 25px;
+            max-width: 550px; /* Slightly larger for more content */
+            width: 100%;
+            padding: 50px 35px 60px;
+            text-align: center;
+            box-shadow: 0 0 40px var(--shadow-dark), inset 0 0 20px var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hero-container:hover {
+            transform: translateY(-8px) scale(1.01);
+        }
+
+        .logo {
+            width: 160px; /* Slightly larger logo */
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 30px;
+            border: 5px solid var(--accent-color); /* Accent color border */
+            box-shadow: 0 0 25px var(--accent-color);
+        }
+
+        #main-title {
+            font-weight: 700;
+            font-size: 3rem; /* Larger and more impactful */
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1.3rem; /* Larger tagline */
+            margin-bottom: 40px;
+            color: var(--text-color);
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid;
+            min-height: 30px; /* Ensure space for typing */
+            display: inline-block; /* For the typing effect */
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: center;
+            gap: 15px; /* Spacing between buttons */
+            margin-top: 20px;
+        }
+
+        .cta-btn {
+            display: inline-flex; /* Use flex for icon and text alignment */
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 16px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            gap: 12px;
+            transition: all 0.3s ease;
+            min-width: 200px; /* Ensure consistent button size */
+        }
+
+        .cta-btn .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .primary-btn {
+             background: transparent;
+            color: var(--text-color);
+            border: 2px solid var(--text-color);
+            box-shadow: 0 5px 20px var(--shadow-light);
+        }
+
+        .primary-btn:hover {
+            background: #c0392b; /* Example: darken(var(--accent-color), 10%) */
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(228, 77, 38, 0.6);
+        }
+
+        .secondary-btn {
+            background: transparent;
+            color: var(--text-color);
+            border: 2px solid var(--text-color);
+            box-shadow: 0 5px 20px var(--shadow-light);
+        }
+
+        .secondary-btn:hover {
+           background: #c0392b; /* Example: darken(var(--accent-color), 10%) */
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(228, 77, 38, 0.6);
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--bg-color); /* More specific background */
+        }
+
+        .about-content {
+            max-width: 900px;
+            background: var(--container-bg);
+            backdrop-filter: blur(10px);
+            padding: 60px 50px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 0 35px var(--shadow-dark), inset 0 0 15px var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .about-content h2 {
+            font-size: 2.8rem;
+            color: var(--accent-color);
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            font-size: 1.15rem;
+            color: var(--text-color);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .highlight-text {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        /* Services Section */
+        .services-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)); /* Subtle overlay */
+        }
+
+        .services-content {
+            max-width: 1000px;
+            width: 100%;
+            background: var(--container-bg);
+            backdrop-filter: blur(10px);
+            padding: 60px 50px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 0 35px var(--shadow-dark), inset 0 0 15px var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .services-content h2 {
+            font-size: 2.8rem;
+            color: var(--accent-color);
+            margin-bottom: 40px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .service-item {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--shadow-dark);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .service-item h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-accent-color); /* Use a secondary accent color */
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg-color);
+        }
+
+        .contact-content {
+            max-width: 900px;
+            width: 100%;
+            background: var(--container-bg);
+            backdrop-filter: blur(10px);
+            padding: 60px 50px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 0 35px var(--shadow-dark), inset 0 0 15px var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-content h2 {
+            font-size: 2.8rem;
+            color: var(--accent-color);
+            margin-bottom: 25px;
+        }
+
+        .contact-content p {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .contact-card {
+            flex: 1;
+            min-width: 280px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: left;
+            box-shadow: 0 5px 15px var(--shadow-dark);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .contact-card h3 {
+            font-size: 1.6rem;
+            color: var(--secondary-accent-color);
+            margin-bottom: 10px;
+        }
+
+        .contact-card p, .contact-card a {
+            font-size: 1rem;
+            color: var(--text-color);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-card a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .contact-form h3 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-color);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(228, 77, 38, 0.3); /* Manual RGB for accent-color */
+        }
+
+        .submit-btn {
+            background: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .submit-btn:hover {
+            background: #c0392b; /* Example: darken(var(--accent-color), 10%) */
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: rgba(10, 10, 10, 0.9);
+            padding: 30px 20px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .site-footer p {
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links img {
+            filter: invert(1); /* For light icons on dark background */
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover img {
+            opacity: 1;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .main-nav {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .hero-container, .about-content, .services-content, .contact-content {
+                padding: 40px 30px;
+            }
+            #main-title {
+                font-size: 2.5rem;
+            }
+            .tagline {
+                font-size: 1.1rem;
+            }
+            .service-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+            .main-header {
+                padding: 0 20px;
+                height: 70px;
+            }
+            .main-nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-link {
+                font-size: 0.95rem;
+                padding: 6px 10px;
+            }
+            .hero-container {
+                padding: 30px 20px;
+            }
+            #main-title {
+                font-size: 2rem;
+            }
+            .cta-btn {
+                font-size: 1rem;
+                padding: 12px 20px;
+                min-width: unset;
+            }
+            .about-content, .services-content, .contact-content {
+                padding: 30px 20px;
+            }
+            .about-content h2, .services-content h2, .contact-content h2 {
+                font-size: 2.2rem;
+            }
+            .about-content p, .contact-content p {
+                font-size: 1rem;
+            }
+            .service-item h3 {
+                font-size: 1.5rem;
+            }
+            .contact-methods {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .hero-container {
+                max-width: 90%;
+            }
+            #main-title {
+                font-size: 1.8rem;
+            }
+            .tagline {
+                font-size: 1rem;
+                min-height: 20px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+            }
+            .chatbot-window {
+                width: 90vw;
+                max-height: 80vh;
+                right: 5vw;
+                bottom: 90px;
+            }
+            .chatbot-messages {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Chatbot Specific CSS */
+        .chatbot-toggle-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--accent-color);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(228, 77, 38, 0.5);
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chatbot-toggle-btn:hover {
+            background: #fff;
+            color: var(--accent-color);
+            box-shadow: 0 8px 25px rgba(228, 77, 38, 0.7);
+            transform: translateY(-3px);
+        }
+
+        .chatbot-toggle-btn .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .chatbot-window {
+            position: fixed;
+            bottom: 90px;
+            right: 25px;
+            width: 360px; /* Slightly wider */
+            max-height: 500px; /* Taller */
+            background: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            box-shadow: 0 0 40px var(--shadow-dark);
+            display: none; /* Controlled by JS */
+            flex-direction: column;
+            z-index: 1000;
+            overflow: hidden;
+            backdrop-filter: blur(12px); /* More blur */
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            pointer-events: none; /* Prevents interaction when hidden */
+        }
+
+        .chatbot-window.open {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .chatbot-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 18px;
+            background: rgba(0,0,0,0.1);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .chatbot-title {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        .chatbot-close-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.6rem; /* Larger close button */
+            font-weight: bold;
+            cursor: pointer;
+            padding: 4px 10px;
+            transition: color 0.2s;
+        }
+
+        .chatbot-close-btn:hover {
+            color: var(--accent-color);
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            font-size: 1rem;
+            color: var(--text-color);
+            display: flex; /* For chat bubble layout */
+            flex-direction: column;
+            gap: 10px; /* Spacing between messages */
+        }
+
+        .bot-message, .user-message {
+            margin-bottom: 8px; /* Adjusted spacing */
+            padding: 12px 16px;
+            border-radius: 18px; /* More rounded bubbles */
+            max-width: 85%;
+            word-wrap: break-word;
+            line-height: 1.5;
+        }
+
+        .user-message {
+            background: var(--secondary-accent-color); /* Different color for user messages */
+            color: #fff;
+            align-self: flex-end;
+            margin-left: auto;
+            border-bottom-right-radius: 4px; /* Tail effect */
+        }
+
+        .bot-message {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-color);
+            align-self: flex-start;
+            margin-right: auto;
+            border-bottom-left-radius: 4px; /* Tail effect */
+        }
+
+        .typing-indicator {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-color);
+            padding: 8px 12px;
+            border-radius: 15px;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            align-self: flex-start;
+            margin-right: auto;
+            display: inline-block; /* To make it wrap content */
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        .chatbot-input-area {
+            display: flex;
+            border-top: 1px solid var(--border-color);
+            padding: 10px 15px;
+            background: rgba(0,0,0,0.05);
+        }
+
+        .chatbot-user-input {
+            flex: 1;
+            border: none;
+            padding: 10px 12px;
+            font-size: 1rem;
+            background: transparent;
+            color: var(--text-color);
+            outline: none;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .chatbot-user-input:focus {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .chatbot-send-btn {
+            background: var(--accent-color);
+            border: none;
+            color: white;
+            font-size: 1.3rem;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-left: 10px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .chatbot-send-btn:hover {
+            background: var(--secondary-accent-color); /* Complementary hover color */
+            color: #fff;
+        }
+        @keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de Entrada */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de Saída (Fechamento) */
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Adicionando a animação ao chatbot */
+.chatbot-window {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    width: 360px; /* Ajuste a largura conforme necessário */
+    max-height: 500px; /* Ajuste a altura conforme necessário */
+    background: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    box-shadow: 0 0 40px var(--shadow-dark);
+    display: none; /* Controlado pelo JS */
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+    backdrop-filter: blur(12px); /* Maior desfoque */
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none; /* Impede interação quando oculto */
+    animation: slideIn 0.6s ease-out forwards; /* Aplica a animação de entrada */
+}
+
+/* Quando o chatbot está aberto */
+.chatbot-window.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+    animation: slideIn 0.6s ease-out forwards; /* Animação de entrada */
+}
+
+/* Quando o chatbot está fechado */
+.chatbot-window.close {
+    animation: slideOut 0.6s ease-out forwards; /* Animação de saída */
+    pointer-events: none; /* Impede interação quando oculto */
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="particles-js" aria-hidden="true"></div>
+
+    <header class="main-header" aria-label="Navegação Principal">
+        <nav class="main-nav">
+            <a href="#home" class="nav-link" aria-label="Página Inicial">Início</a>
+            <a href="#quem-somos" class="nav-link" aria-label="Sobre a Carambola Induzidos">Quem Somos</a>
+            <a href="#servicos" class="nav-link" aria-label="Nossos Serviços">Serviços</a>
+            <a href="#contato" class="nav-link" aria-label="Entre em Contato">Contato</a>
+   
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-container" data-aos="zoom-in">
+                <img src="/logo carambola gpt.jpg" alt="Logo Carambola Induzidos" class="logo" width="140" height="140" loading="lazy" />
+                <h1 id="main-title"></h1>
+                <div id="typing-text" class="tagline"></div>
+
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5518981260001" target="_blank" rel="noopener noreferrer" class="cta-btn primary-btn" aria-label="Fale conosco via WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>
+                        WhatsApp
+                    </a>
+                    <a href="tel:+5518981260001" class="cta-btn secondary-btn" aria-label="Ligue para nós">
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+                        Ligue para nós
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Carambola+Induzidos,+Ara%C3%A7atuba,+SP" target="_blank" rel="noopener noreferrer" class="cta-btn secondary-btn" aria-label="Ver no mapa">
+                        <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M168.3 499.2C116.1 435 0 279.4 0 192 0 86 86 0 192 0S384 86 384 192c0 87.4-116.1 243-168.3 307.2-12.3 15.3-35.1 15.3-47.4 0zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg>
+                        Como chegar
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="quem-somos" class="hero-section">
+            <div class="about-content" data-aos="fade-up">
+                <h2>Quem Somos</h2>
+                <p>A <strong class="highlight-text">Carambola Induzidos</strong> é mais do que uma oficina; somos seu parceiro de confiança em elétrica automotiva, com anos de experiência e paixão por veículos. Nosso compromisso é com a excelência, utilizando as mais avançadas ferramentas e técnicas para garantir o desempenho ideal do seu carro.</p>
+                <p>Nossa equipe é formada por especialistas altamente qualificados e em constante atualização, prontos para resolver qualquer desafio elétrico, desde a manutenção preventiva até reparos complexos em **sistemas elétricos, motores de partida, alternadores e baterias.**</p>
+                <p>Acreditamos na transparência e no atendimento personalizado. Aqui, você não apenas resolve um problema, mas entende o que acontece com seu veículo, recebendo as melhores soluções com total clareza. Venha nos visitar e experimente a diferença de um serviço que realmente se importa!</p>
+            </div>
+        </section>
+
+        <section id="servicos" class="hero-section">
+            <div class="services-content" data-aos="fade-up">
+                <h2>Nossos Serviços</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Diagnóstico Elétrico Completo</h3>
+                        <p>Identificamos falhas em todo o sistema elétrico do seu veículo com precisão e rapidez.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Manutenção de Alternadores</h3>
+                        <p>Garanta que a bateria do seu carro esteja sempre carregada com nossos serviços especializados.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Reparo de Motores de Partida</h3>
+                        <p>Seu carro não liga? Oferecemos soluções eficientes para motores de partida.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Troca e Teste de Baterias</h3>
+                        <p>Baterias de alta qualidade e testes completos para a vida útil ideal.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Instalação de Acessórios</h3>
+                        <p>Instalamos acessórios elétricos de forma segura e profissional.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Reparos em Chicotes Elétricos</h3>
+                        <p>Soluções para problemas complexos em chicotes e fiações automotivas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="hero-section">
+            <div class="contact-content" data-aos="fade-up">
+                <h2>Entre em Contato</h2>
+                <p>Tem alguma dúvida ou precisa de um orçamento? Estamos aqui para ajudar!</p>
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <h3>Atendimento</h3>
+                        <p>Segunda a Sexta: 7h00 - 18h00</p>
+                    
+                    </div>
+                    <div class="contact-card">
+                        <h3>Telefone / WhatsApp</h3>
+                        <p><a href="tel:+5518981260001">(18) 98126-0001</a></p>
+                        <p><a href="https://wa.me/5518981260001" target="_blank" rel="noopener noreferrer">Fale conosco pelo WhatsApp</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Endereço</h3>
+                        <p>Rua Anselmo Manarelli, 86 - Santana</p>
+                        <p>Araçatuba - SP, 16050-590</p>
+                        <p><a href="https://www.google.com/maps/search/?api=1&query=Carambola+Induzidos,+Ara%C3%A7atuba,+SP" target="_blank" rel="noopener noreferrer">Ver no Google Maps</a></p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                  
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Carambola Induzidos. Todos os direitos reservados.</p>
+        
+           
+         
+            </div>
+    </footer>
+
+    <button id="chatbot-toggle-btn" class="chatbot-toggle-btn" aria-label="Abrir Chatbot">
+        <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M123.6 391.3c12.9-9.4 29.4-11.8 44.6-6.4l247.9 92.5c15.2 5.7 31.6 3.1 44.6-6.4L507.7 417c-4.2-2.5-1.9-6.3-11.4-11.4c-9.5-5.1-14.7-6.9-19.6-1.5c-4.9 5.4-8.8 11.2-13.6 15.6c-4.8 4.4-10.4 7.6-16.8 9.6-6.4 2-13.3 2-20.2 0-6.9-2-13.5-5.2-19.5-9.6l-247.9-92.5c-15.2-5.7-31.6-3.1-44.6 6.4L4.3 161c-4.2 2.5-1.9 6.3-11.4 11.4c-9.5 5.1-14.7 6.9-19.6 1.5c-4.9-5.4-8.8-11.2-13.6-15.6c-4.8-4.4-10.4-7.6-16.8-9.6-6.4-2-13.3-2-20.2 0-6.9 2-13.5 5.2-19.5 9.6L.3 161zM480 32H32C14.3 32 0 46.3 0 64v352c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zm-64 96H96c-8.8 0-16 7.2-16 16s7.2 16 16 16h320c8.8 0 16-7.2 16-16s-7.2-16-16-16zm0 64H96c-8.8 0-16 7.2-16 16s7.2 16 16 16h320c8.8 0 16-7.2 16-16s-7.2-16-16-16zm0 64H96c-8.8 0-16 7.2-16 16s7.2 16 16 16h320c8.8 0 16-7.2 16-16s-7.2-16-16-16z"/></svg>
+        Fale conosco
+    </button>
+
+    <div id="chatbot-window" class="chatbot-window" aria-live="polite" aria-atomic="true">
+        <div class="chatbot-header">
+            <h3 class="chatbot-title">Atendimento Carambola</h3>
+            <button id="chatbot-close-btn" class="chatbot-close-btn" aria-label="Fechar Chatbot">×</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages">
+            <p class="bot-message"><strong>Carambola:</strong> Olá! Eu sou seu assistente virtual da Carambola Induzidos. Como posso ajudar hoje?</p>
+            <p class="bot-message typing-indicator" style="display: none;">Carambola está digitando...</p>
+        </div>
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-user-input" class="chatbot-user-input" placeholder="Digite sua pergunta..." aria-label="Digite sua mensagem para o chatbot" />
+            <button id="chatbot-send-btn" class="chatbot-send-btn" aria-label="Enviar mensagem">
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ duration: 1000, once: true }); // Initialize AOS, run once
+
+            // Typewriter effect for main title
+            const titleEl = document.getElementById("main-title");
+            const fullTitle = "Carambola Induzidos";
+            let titleIdx = 0;
+
+            function typeMainTitle() {
+                if (titleIdx < fullTitle.length) {
+                    titleEl.textContent += fullTitle[titleIdx];
+                    titleIdx++;
+                    setTimeout(typeMainTitle, 80);
+                }
+            }
+            typeMainTitle();
+
+            // Typewriter effect for tagline
+            const typingEl = document.getElementById("typing-text");
+            const phrases = ["Elétrica Automotiva de Alta Performance", "Confiança e Qualidade em Cada Reparo", "Seu Veículo em Boas Mãos"];
+            let currentPhraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function typeTagline() {
+                const currentPhrase = phrases[currentPhraseIndex];
+                let displayText = currentPhrase.substring(0, charIndex);
+
+                // Add blinking cursor
+                typingEl.textContent = displayText + (charIndex % 2 === 0 && !isDeleting ? "|" : " ");
+
+                if (!isDeleting) {
+                    if (charIndex < currentPhrase.length) {
+                        charIndex++;
+                        setTimeout(typeTagline, 80); // Typing speed
+                    } else {
+                        isDeleting = true;
+                        setTimeout(typeTagline, 1500); // Pause before deleting
+                    }
+                } else {
+                    if (charIndex > 0) {
+                        charIndex--;
+                        setTimeout(typeTagline, 40); // Deleting speed
+                    } else {
+                        isDeleting = false;
+                        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+                        setTimeout(typeTagline, 500); // Pause before new phrase
+                    }
+                }
+            }
+            typeTagline();
+
+            // Initialize Particles.js
+            function initParticles(elementId) {
+                particlesJS(elementId, {
+                    particles: {
+                        number: { value: 60, density: { enable: true, value_area: 800 } },
+                        color: { value: "#ffffff" },
+                        shape: { type: "circle", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 } },
+                        opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+                        size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+                        line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                        move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+                    },
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+                        modes: {
+                            grab: { distance: 180, line_linked: { opacity: 1 } },
+                            bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                            repulse: { distance: 150, duration: 0.4 },
+                            push: { particles_nb: 4 },
+                            remove: { particles_nb: 2 }
+                        }
+                    },
+                    retina_detect: true
+                });
+            }
+            initParticles('particles-js');
+
+            // Theme Toggle Functionality
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const body = document.body;
+
+           
+
+            // Simple contact form submission (client-side validation only)
+            const contactForm = document.querySelector('.contact-form');
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Basic client-side validation
+                if (!name || !email || !message) {
+                    alert('Por favor, preencha todos os campos.');
+                    return;
+                }
+
+                // Simulate API call to a backend service
+                try {
+                    // In a real project, this would be a fetch() call to your backend
+                    // const response = await fetch('/api/contact', {
+                    //     method: 'POST',
+                    //     headers: { 'Content-Type': 'application/json' },
+                    //     body: JSON.stringify({ name, email, message })
+                    // });
+                    // if (!response.ok) throw new Error('Failed to send message');
+                    // const result = await response.json();
+
+                    // Simulating success
+                    console.log('Form data sent:', { name, email, message });
+                    alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+                    contactForm.reset();
+                } catch (error) {
+                    console.error('Erro ao enviar mensagem:', error);
+                    alert('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.');
+                }
+            });
+
+            // Chatbot Functionality
+            const chatbotToggleBtn = document.getElementById("chatbot-toggle-btn");
+            const chatbotCloseBtn = document.getElementById("chatbot-close-btn");
+            const chatbotWindow = document.getElementById("chatbot-window");
+            const chatbotMessages = document.getElementById("chatbot-messages");
+            const chatbotUserInput = document.getElementById("chatbot-user-input");
+            const chatbotSendBtn = document.getElementById("chatbot-send-btn");
+            const typingIndicator = document.querySelector('.typing-indicator');
+
+            chatbotToggleBtn.addEventListener("click", () => {
+                chatbotWindow.classList.add("open");
+                chatbotUserInput.focus(); // Focus on input when opened
+            });
+
+            chatbotCloseBtn.addEventListener("click", () => {
+                chatbotWindow.classList.remove("open");
+            });
+
+            chatbotSendBtn.addEventListener("click", sendMessage);
+            chatbotUserInput.addEventListener("keypress", (e) => {
+                if (e.key === "Enter") {
+                    sendMessage();
+                }
+            });
+
+            function addMessage(text, senderClass) {
+                const p = document.createElement("p");
+                p.className = senderClass === 'user' ? 'user-message' : 'bot-message';
+                p.textContent = text;
+                chatbotMessages.appendChild(p);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to bottom
+            }
+
+            async function sendMessage() {
+                const userMessage = chatbotUserInput.value.trim();
+                if (!userMessage) return;
+
+                addMessage(userMessage, "user");
+                chatbotUserInput.value = "";
+                typingIndicator.style.display = 'block'; // Show typing indicator
+
+                // Simulate API call for a more intelligent response
+                try {
+                    const botResponse = await getBotResponse(userMessage);
+                    typingIndicator.style.display = 'none'; // Hide typing indicator
+                    addMessage(botResponse, "bot");
+                } catch (error) {
+                    console.error("Chatbot error:", error);
+                    typingIndicator.style.display = 'none';
+                    addMessage("Desculpe, ocorreu um erro. Por favor, tente novamente mais tarde.", "bot");
+                }
+            }
+chatbotCloseBtn.addEventListener("click", () => {
+    chatbotWindow.classList.remove("open");
+    chatbotWindow.classList.add("close"); // Adiciona a animação de saída
+
+    // Remove a classe 'close' depois que a animação terminar para poder reaplicar a animação de entrada quando abrir
+    setTimeout(() => {
+        chatbotWindow.classList.remove("close");
+    }, 600); // 600ms, o tempo da animação
+});
+
+            // Advanced Bot Response Logic (simulated with a delay)
+            async function getBotResponse(userMessage) {
+                const lowerCaseMessage = userMessage.toLowerCase();
+                let response = "Desculpe, não consegui entender sua pergunta. Posso ajudar com informações sobre serviços, preço, horário, onde, telefone, agendamento, equipe.";
+                // Simulate a delay for a more natural conversation flow
+                await new Promise(resolve => setTimeout(resolve, Math.random() * 1500 + 500)); // 0.5 to 2 seconds
+
+                if (lowerCaseMessage.includes("olá") || lowerCaseMessage.includes("oi")) {
+                    response = "Olá! Como posso te auxiliar hoje? Posso falar sobre nossos serviços, preço, horário, onde, telefone, agendamento, equipe, ou tirar dúvidas.";
+                } else if (lowerCaseMessage.includes("serviços") || lowerCaseMessage.includes("o que fazem")) {
+                    response = "Nós somos especialistas em elétrica automotiva, incluindo manutenção e reparo de alternadores, motores de partida, sistemas elétricos e baterias. Quer saber mais sobre algum serviço específico?";
+                } else if (lowerCaseMessage.includes("preço") || lowerCaseMessage.includes("valor") || lowerCaseMessage.includes("quanto custa")) {
+                    response = "Os valores dos serviços variam muito dependendo do tipo de manutenção e do modelo do veículo. Para um orçamento preciso, por favor, entre em contato via WhatsApp ou nos visite!";
+                } else if (lowerCaseMessage.includes("horário") || lowerCaseMessage.includes("funciona") || lowerCaseMessage.includes("abrem")) {
+                    response = "Nosso horário de funcionamento é de segunda a sexta, das 7h às 18 .";
+                } else if (lowerCaseMessage.includes("onde") || lowerCaseMessage.includes("local") || lowerCaseMessage.includes("endereço")) {
+                    response = "Estamos localizados em Araçatuba - SP. Para o endereço exato e rotas, clique no link '📍 Como chegar' na página principal.";
+                } else if (lowerCaseMessage.includes("telefone") || lowerCaseMessage.includes("contato") || lowerCaseMessage.includes("ligar")) {
+                    response = "Nosso telefone e WhatsApp é (18) 98126-0001. Você pode ligar diretamente ou enviar uma mensagem.";
+                } else if (lowerCaseMessage.includes("agendamento") || lowerCaseMessage.includes("marcar")) {
+                    response = "Para agendamentos, o ideal é que você nos chame diretamente no WhatsApp, assim podemos verificar a disponibilidade e te atender melhor: (18) 98126-0001.";
+                } else if (lowerCaseMessage.includes("obrigado") || lowerCaseMessage.includes("valeu")) {
+                    response = "De nada! Se precisar de mais alguma coisa, é só perguntar.";
+                } else if (lowerCaseMessage.includes("problema com carro") || lowerCaseMessage.includes("carro não liga")) {
+                    response = "Entendo. Para diagnosticar o problema com seu carro, precisaríamos de mais detalhes. Sugiro que entre em contato conosco pelo WhatsApp ou traga seu veículo para uma avaliação em nossa oficina.";
+                } else if (lowerCaseMessage.includes("equipe") || lowerCaseMessage.includes("quem são vocês")) {
+                    response = "Somos a Carambola Induzidos, uma equipe de profissionais experientes e dedicados à elétrica automotiva, comprometidos em oferecer o melhor serviço e solução para o seu veículo.";
+                }
+
+                // Example for a more "intelligent" fallback if no direct match
+                if (response.includes("Desculpe, não consegui entender") && (lowerCaseMessage.includes("carro") || lowerCaseMessage.includes("veículo") || lowerCaseMessage.includes("oficina"))) {
+                    response = "Parece que sua pergunta é sobre seu veículo ou nossa oficina. Poderia ser mais específico, por favor?";
+                }
+
+                return response;
+            }
+        });
+    </script>
+</body>
+</html>
